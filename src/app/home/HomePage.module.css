@@ -1,0 +1,570 @@
+
+
+
+.container {
+  font-family: Arial, sans-serif;
+  color: #333;
+  overflow-x: hidden; 
+
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+  position: absolute; 
+  width: 100%;
+  z-index: 10;
+  background-color: transparent;
+  box-shadow: 0 1px 4px rgba(9, 42, 36, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navLinks {
+  display: flex;
+}
+
+.navLinks a {
+  margin: 0 1rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.authLinks {
+  display: flex;
+  align-items: center;
+}
+
+.authLinks a {
+  margin-right: 1rem;
+  color: #010101;
+  text-decoration: none;
+}
+
+.estimateButton {
+  background-color: #1c5239;
+  color: white;
+
+  padding: 0.5rem 1rem;
+  height: 60px;
+  
+  cursor: pointer;
+  
+ 
+}
+
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  padding-top: 80px; 
+  overflow: hidden;
+  margin-top: -100px;
+  margin-left: 170px;
+}
+
+.heroText {
+  flex: 1;
+  z-index: 2; 
+  margin-right: 170px;
+}
+
+.heroText h1 {
+  font-size: 5rem;
+  font-weight: 500;
+ 
+  
+}
+
+.heroText p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  
+ 
+}
+
+.ctaButton {
+  background-color: #1c5239;
+  color: white;
+  border: none;
+  
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  width: 150px;
+   margin-left: px; 
+
+}
+
+.heroImages {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.imageWrapper1 {
+  position: relative;
+  width: 350px;
+  top: -320px;
+  right: 200px;
+  height: 1px;
+  z-index: 1;
+  display: block;
+}
+
+.imageWrapper2 {
+  position: absolute;
+  top: -38px;
+  left: 250px;
+  width: 300px;
+  height: 350px;
+  z-index: 3;
+}
+
+
+.testimonials {
+  background-color: #f7f7f7;
+  padding: 2rem;
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(4, 1fr);
+
+}
+
+
+
+.testimonialItem p {
+  font-size: 0.6rem;
+  color: #666;
+  text-align: center;
+  max-width: 150px;
+}
+
+
+
+
+
+
+
+.testimonialImage {
+  max-width: 80px;          
+  height: 30px;            
+  margin-bottom: 0.5rem;  
+  margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+
+/* Responsive layout for screens 480px or smaller */
+@media (max-width: 480px) {
+  .testimonials {
+    grid-template-columns: 1fr 1fr; /* Two items per row */
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .testimonialItem {
+    flex: 1 1 100%;              
+    margin: 0.5rem;             
+  }
+
+  .testimonialImage {
+    max-width: 60px;             
+  }
+}
+
+@media (max-width: 480px) {
+ /* .testimonialItem {
+    flex: 1 1 100%;              
+    margin: 0.4rem;             
+    padding: 0.1rem; 
+   margin-bottom: 100px;
+                
+  }
+ 
+ 
+
+  .testimonialItem p {
+    font-size: 0.9rem;           
+  } */
+}
+
+
+.mobileBottomNav {
+  display: none; 
+}
+
+
+@media (max-width: 768px) {
+  
+ 
+ 
+ 
+
+ 
+  .container{
+    overflow-x: hidden;
+  }
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding-top: 200px;
+ 
+    overflow-x: hidden;
+  }
+
+  .heroText h1 {
+    font-size: 2rem;
+  }
+
+  .heroText p {
+    font-size: 1rem;
+  }
+
+  .heroImages {
+    justify-content: center;
+    position: relative;
+    margin-top: 1rem;
+  }
+
+  .imageWrapper1 {
+    width: 90%;
+    height: auto;
+    position: relative;
+    top: -10px;
+    left: 0;
+    margin: 0 auto;
+    box-shadow: none;
+  }
+
+  .imageWrapper2 {
+    width: 70%;
+    height: auto;
+    position: relative;
+    top: 0px;
+    left: -60px;
+    margin: 0 auto;
+    box-shadow: none;
+  }
+
+  .navbar {
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .navLinks {
+    display: none; 
+  }
+
+  .authLinks {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    background-color: #fff;
+  }
+
+  .logo {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mobileBottomNav {
+    display: flex; 
+    justify-content: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  .mobileBottomNav a {
+    margin: 0 1rem;
+    color: #333;
+    text-decoration: none;
+  }
+  .mobileBottomNav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .mobileBottomNav a svg {
+    font-size: 24px;
+    margin-bottom: 4px; 
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: -140px;
+    /* padding: 6rem; */
+    padding: 2rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin-left: 80px;
+  }
+
+  .heroText {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    margin-left: 10px;
+  }
+
+  .ctaButton {
+    width: 80%;
+    margin: 1rem auto;
+  }
+
+  .heroImages {
+   
+    flex-direction: row;
+    
+    width: 100%;
+    justify-content: center;
+  }
+
+  .imageWrapper1,
+  .imageWrapper2 {
+    width: 100%;
+    
+    margin-left: -20px;
+  }
+
+  .imageWrapper1 img,
+  .imageWrapper2 img {
+    max-width: 100%; 
+    height: 200px;
+    width: 140px;
+    display: block;
+    gap: 1rem;
+  }
+ 
+
+
+
+
+
+.navbar{
+  width: 100vw;
+}
+
+
+
+  .mobileBottomNav {
+   width: 100vw;
+    font-size: 16px; 
+  }
+
+  .mobileBottomNav a {
+    font-size: 14px;
+    width: 100vw;
+   padding-right:-20px ;
+
+   
+  }
+  .testimonials {
+    grid-template-columns: 1fr 1fr; 
+  }
+  .authLinks{
+    display: none;
+  }
+}
+
+
+
+
+
+.responsiveNavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+
+.responsiveNavbar {
+  display: none;
+}
+
+
+@media (max-width: 480px) {
+  .responsiveNavbar {
+    display: flex;
+  }
+}
+
+.navLogo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+
+.navProfileLogo {
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #666;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  color: white;
+  margin-left: 250px;
+
+}
+
+.navDropdownMenu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #444;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .navDropdownMenu {
+    display: block;
+  }
+  .authLinks{
+    /* display: none; */
+  }
+
+}
+
+
+/* Styling adjustments for 320px screens */
+@media (max-width: 320px ) {
+  .hero {
+    padding: 1rem;
+    margin: 0 auto;
+    margin-top: -15px;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin-left: 90px; /* Align content center */
+  }
+  .hero h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .heroText {
+    margin-left: 0;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .ctaButton {
+    width: 90%;
+    margin: 1rem auto;
+    font-size: 0.9rem;
+  }
+
+  .heroImages {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imageWrapper1,
+  .imageWrapper2 {
+    width: 80%;
+    margin-left: 10px;
+    /* margin-bottom: 1rem; */
+  }
+
+  .imageWrapper1 img,
+  .imageWrapper2 img {
+    max-width: 80%;
+    height: 150px;
+    width: auto;
+    /* gap: 0.5rem; */
+  }
+
+  .navbar {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .mobileBottomNav {
+    font-size: 14px;
+  }
+
+  .mobileBottomNav a {
+    font-size: 12px;
+    padding-right: 0;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    
+  }
+  .testimonialItem{
+    margin-left: 50px;
+  }
+  .responsiveNavbar {
+    padding: 0.5rem;
+  }
+
+  .navLogo {
+    font-size: 1.2rem;
+  }
+
+  .navProfileLogo {
+    font-size: 0.8rem;
+    margin-left: 0;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .navDropdownMenu {
+    top: 35px;
+    right: 10px;
+    padding: 0.3rem 0.8rem;
+  }
+
+  /* Hide elements that don't fit well on smaller screens */
+  .authLinks {
+    display: none;
+  }
+  
+}
+
+

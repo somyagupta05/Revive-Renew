@@ -1,0 +1,131 @@
+.container {
+  width: 60%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  
+}
+
+.heading {
+  font-size: 3rem;
+  margin-bottom: 10rem;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  align-items: start;
+}
+
+
+.card {
+  background-color: rgb(214, 223, 221);;
+
+  text-align: left;
+  transition: transform 0.3s;
+  position: relative;
+  
+ 
+  padding-bottom: 2.5rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:nth-child(odd) {
+  transform: translateY(-75px); 
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  margin-left: 20px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  margin-left: 20px;
+}
+
+.button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: rgb(10, 135, 106);;
+  border: none;
+  
+  cursor: pointer;
+  margin-left: 20px;
+  margin-bottom: 1rem;
+}
+
+.button:hover {
+  background-color: #34495e;
+}
+
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; 
+  }
+
+  .card {
+    transform: translateY(0); 
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+  .grid {
+    gap: 1.5rem; 
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+
+  .button {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+  .card {
+    padding: 1rem;
+    padding-bottom: 2rem; 
+    margin-top: -20px;
+  }
+  .heading{
+    margin-top: -100px;
+  }
+}
